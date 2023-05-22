@@ -6,7 +6,7 @@ import renderToDom from './renderToDOM';
 
 const splashImg = () => {
   const imgString = `
-  <i="https://media.cybernews.com/images/featured/2021/02/qw2ja4h83fz41.jpg">`;
+  <img="https://media.cybernews.com/images/featured/2021/02/qw2ja4h83fz41.jpg">`;
   renderToDom('#splashImage', imgString);
 };
 splashImg();

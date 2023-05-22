@@ -1,10 +1,16 @@
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: rgb(16, 23, 39);
+  color: rgb(241, 238, 238);
   text-align: center;
   margin-top: 100px;
+  font-family: 'Roboto Slab', serif;
+}
+
+#app {
+  background-color: white;
+  margin: 20px 200px 20px 200px;
+  color: rgb(16, 23, 39);
 }

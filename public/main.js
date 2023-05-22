@@ -4,8 +4,16 @@ import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import renderToDom from './renderToDOM';
 
+const splashImg = () => {
+  const imgString = `
+  <i="https://media.cybernews.com/images/featured/2021/02/qw2ja4h83fz41.jpg">`;
+  renderToDom('#splashImage', imgString);
+};
+splashImg();
+
 const title = () => {
-  const domString = `<div class="generator-title"><h1>Programming Joke Generator</h1>
+  const domString = `
+  <div class="generator-title"><h1>Programming Joke Generator</h1>
   </div>`;
   renderToDom('#generatorTitle', domString);
 };
@@ -14,7 +22,9 @@ title();
 // joke logic //
 
 const joke = [];
+// this array function holds the entirety of one joke //
 
+// the next variables is the promise for the data //
 const jokeAPI = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart';
 
 const getJoke = () => new Promise((resolve, reject) => {
@@ -43,15 +53,7 @@ const punchLineBtn = () => {
   renderToDom('#btnContainer', btnString);
 };
 
-// render jokes //
-
-// const renderJokeSetup = () => {
-//   getJoke().then((response) => {
-//     const domString = `<h2>${response}</h2>`;
-//     punchLineBtn();
-//     renderToDom('#app', domString);
-//   });
-// };
+// render jokes to dom //
 
 const renderJokeSetup = (obj) => {
   joke.push(obj);
@@ -67,14 +69,6 @@ const renderJokeSetup = (obj) => {
     newJokeBtn();
   }
 };
-
-// const renderJokeDelivery = () => {
-//   getJoke().then((response) => {
-//     const domString = `<h2>${response}</h2>`;
-//     newJokeBtn();
-//     renderToDom('#app', domString);
-//   });
-// };
 
 const renderJokeDelivery = () => {
   let domString = '';

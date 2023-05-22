@@ -6,7 +6,7 @@ import renderToDom from './renderToDOM';
 
 const splashImg = () => {
   const imgString = `
-  <img="https://media.cybernews.com/images/featured/2021/02/qw2ja4h83fz41.jpg">`;
+  <img src="https://media.cybernews.com/images/featured/2021/02/qw2ja4h83fz41.jpg" alt="vintage computer">`;
   renderToDom('#splashImage', imgString);
 };
 splashImg();
@@ -42,13 +42,13 @@ const getJoke = () => new Promise((resolve, reject) => {
 // joke buttons //
 
 const newJokeBtn = () => {
-  const btnString = `<button class="btn btn-danger" 
+  const btnString = `<button class="btn btn-success" 
   id="getNewJoke">New Joke</button>`;
   renderToDom('#btnContainer', btnString);
 };
 
 const punchLineBtn = () => {
-  const btnString = `<button class="btn btn-danger" 
+  const btnString = `<button class="btn btn-success" 
   id="getPunchline">Get Punchline</button>`;
   renderToDom('#btnContainer', btnString);
 };
@@ -82,7 +82,7 @@ const renderJokeDelivery = () => {
 
 const init = () => {
   const jokeStart = () => {
-    const domString = `<button class="btn btn-danger" id="getJoke">Get Joke</button>
+    const domString = `<button class="btn btn-success" id="getJoke">Get Joke</button>
     </div>`;
     renderToDom('#btnContainer', domString);
   };
